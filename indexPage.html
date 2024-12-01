@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html>
+<!-- todo: need to cerate different buttons with my code, about me.  -->
+<!-- idea: I think a good idea would be to have to scroll with the about me seciton and my code seciton -->
+<!-- todo: Create a background for the webpage and make it look nice -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="IndexPage_js.js"></script>
+    <script src="IndexPage_js.js" defer></script>
+    <title>Valentino's Website</title>
+</head>
+<body id="BackGroundImgae" background="Pictures/butterfly.jpeg">
     <h1><u><center>Welcome To Valentino's Website</center></u></h1>
-    <body>
-        Phone Number: 0490854889 || Email: valentinoosorioschwarz@gmail.com || GitHub: [INSERT GITHUBG LINK]
-    </body>
-    <br><br><button id="about-me-btn"  onclick=" about_me_btn_click()"><u>About Me</u></button><br>
-    <div id="about-me-text">
-        <body>
-         Hi. My name is Valentino Osorio Schwarz, I'm currently
-         A Computer Science student who loves to code and create
-         new and innavative projects.
-         <br><br>
-         <h3>Hobbies</h3>
-         <body>
-             A few of my favourite hobbies is doing track and 
-             field where my favourite events to compete in are High Jump,
-             Triple Jump, 100 and 200 meter sprints. I Also love rubix cubes 
-             where I love solving the 5x5 rubix cube. But I favourite hobbie 
-             out of all my hobbies is codeing. I know as cringy as it is 
-             codeing makes me so happy to do and lets me be super creative 
-             and creates things staright from my imagnation. I started my codeing 
-             jounry when I was around 13 years old, learning python as one of 
-             my first programming lanuage. As any one who started to code, 
-             I went to youtube and google "How to code?". I had a youtbe 
-             video explaning what an IDE is and talk about how to complie code etc.
-             And from the very start I was enchanteded. I wanted to learn more and more
-             eventually makeing codeing my favourite hobby to do. 
-         </body>
-     </body>
+    <center>
+        <p>Phone Number: 0490854889 || Email: valentinoosorioschwarz@gmail.com || GitHub: [INSERT GITHUB LINK]</p>
+    </center>
+    
+    <div class="section">
+        <button id="about-me-btn" onclick="about_me_btn_click()"><u>About Me</u></button>
+        <div id="about-me-text">
+            <p>
+                Hi. My name is Valentino Osorio Schwarz. I'm currently a Computer Science student who loves to code and create
+                new and innovative projects.
+            </p>
+            <h3>Hobbies</h3>
+            <p>
+                A few of my favourite hobbies is doing track and 
+                field where my favourite events to compete in are High Jump,
+                Triple Jump, 100 and 200 meter sprints. I Also love rubix cubes 
+                where I love solving the 5x5 rubix cube. But I favourite hobbie 
+                out of all my hobbies is codeing. I know as cringy as it is 
+                codeing makes me so happy to do and lets me be super creative 
+                and creates things staright from my imagnation. I started my codeing 
+                jounry when I was around 13 years old, learning python as one of 
+                my first programming lanuage. As any one who started to code, 
+                I went to youtube and google "How to code?". I had a youtbe 
+                video explaning what an IDE is and talk about how to complie code etc.
+                And from the very start I was enchanteded. I wanted to learn more and more
+                eventually makeing codeing my favourite hobby to do. 
+            </p>
+        </div>
     </div>
+    
+    <div class="section">
+        <button id="my-code-btn" onclick="my_code_btn()"><u>My Code</u></button>
+        <div id="my-code-text">
+            <p>Placeholder for your code-related content. Add details about your favorite projects and coding experience here!</p>
+        </div>
+    </div>
+</body>
 </html>
+

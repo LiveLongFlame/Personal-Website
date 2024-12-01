@@ -1,9 +1,14 @@
-let text_showen = false;
-function about_me_btn_click(){
-    if(text_showen){
-        document.getElementById("about-me-text").style.display = "block";
-    }else{
-        document.getElementById("about-me-text").style.display = "none";
-    }
-    text_showen  = !text_showen;
+let aboutMeVisible = false;
+let myCodeVisible = false;
+
+function about_me_btn_click() {
+    const aboutMeText = document.getElementById("about-me-text");
+    aboutMeVisible = !aboutMeVisible;
+    aboutMeText.style.display = aboutMeVisible ? "block" : "none";
+}
+
+function my_code_btn() {
+    const myCodeText = document.getElementById("my-code-text");
+    myCodeVisible = !myCodeVisible;
+    myCodeText.style.display = myCodeVisible ? "block" : "none";
 }
