@@ -12,3 +12,4 @@ function my_code_btn() {
     myCodeVisible = !myCodeVisible;
     myCodeText.style.display = myCodeVisible ? "block" : "none";
 }
+
