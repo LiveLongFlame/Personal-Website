@@ -11,5 +11,5 @@ function my_code_btn() {
     const myCodeText = document.getElementById("my-code-text");
     myCodeVisible = !myCodeVisible;
     myCodeText.style.display = myCodeVisible ? "block" : "none";
-}
 
+}
