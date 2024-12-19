@@ -17,3 +17,31 @@ function gitHub_btn(){
 function linkedIn_btn(){
     window.open("https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/");
 }
+
+
+function scrolltoPoint(sectionId) {
+    const section = document.getElementById(sectionId);
+    const targetPosition = section.offsetTop;  
+
+    let currentPosition = window.pageYOffset;  
+    let distance = targetPosition - currentPosition;  
+    let duration = 400;  
+    let startTime = null;  
+
+    function scrollAnimation(currentTime) {
+        if (startTime === null) {
+            startTime = currentTime;
+        }
+
+        let timeElapsed = currentTime - startTime;
+        let progress = Math.min(timeElapsed / duration, 1);  
+
+        window.scrollTo(0, currentPosition + distance * progress);  
+
+        if (progress < 1) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}

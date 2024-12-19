@@ -86,10 +86,12 @@ button:hover {
 
 
 #my-code-text {
-    display: none; 
+    display: display; 
     margin-top: 20px;
     padding: 15px;
     border: 2px solid #9F2B68;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
 }
+
+#top_nav {
+    position: fixed; /* Fix the nav bar to the top */
