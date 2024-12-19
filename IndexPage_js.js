@@ -12,3 +12,8 @@ function my_code_btn() {
 function gitHub_btn(){
     window.open("https://github.com/LiveLongFlame");
 }
+
+
+function linkedIn_btn(){
+    window.open("https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/");
+}
