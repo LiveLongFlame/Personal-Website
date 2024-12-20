@@ -74,7 +74,7 @@ button:hover {
 .about_me {
     margin: 20px auto;
     background-color: #192531;
-    border-top: 2px solid #2c4157;
+    border-top: 2px solid ;
     border-bottom: 2px solid #2c4157;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -86,7 +86,7 @@ button:hover {
     display: display; 
     margin-top: 20px;
     padding: 15px;
-    border: 2px solid #9F2B68;
+    border: 2px solid ccccccccccccccccc;
     border-radius: 10px;
 }
 
@@ -97,4 +97,30 @@ button:hover {
     width: 800%;     /* Ensures it spans the full width of the viewport */
     background-color: transparent; /* Set your desired background color */
     z-index: 999;   
+}
+
+#project_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-color: #9F2B68;
+}
+
+#project_table th, #project_table td {
+    text-align: left;
+    padding: 12px;
+}
+
+#project_table th {
+    color: #FFFFFF;
+    border-color: #9F2B68;
+}
+
+#project_table tr:hover {
+    background-color: #9F2B68;
+    color: #FFFFFF;
+}
+
+#project_table td {
+    color: #FFFFFF;
 }
