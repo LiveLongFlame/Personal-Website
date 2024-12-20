@@ -27,8 +27,8 @@ button {
 
 button:hover {
     transform: scale(0.9);
-    color: #8092a7;
-    border-color: #8092a7;
+    background-color: #9F2B68;;
+    border-color: #9F2B68;
 }
 
 
@@ -91,5 +91,10 @@ button:hover {
 }
 
 #top_nav {
-    position: fixed; /* Fix the nav bar to the top */
+    position: fixed; /* Keeps it fixed if that's desired */
+    top: 0;          /* Position it at the top of the viewport */
+    left: 0;         /* Align to the left edge of the viewport */
+    width: 800%;     /* Ensures it spans the full width of the viewport */
+    background-color: transparent; /* Set your desired background color */
+    z-index: 999;   
 }

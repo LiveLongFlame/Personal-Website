@@ -22,7 +22,8 @@ function linkedIn_btn(){
 function scrolltoPoint(sectionId) {
     const section = document.getElementById(sectionId);
     const targetPosition = section.offsetTop;  
-
+    const topNav = document.getElementById("top_nav");
+    topNav.style.backgroundColor = "transparent"; 
     let currentPosition = window.pageYOffset;  
     let distance = targetPosition - currentPosition;  
     let duration = 400;  
@@ -44,4 +45,14 @@ function scrolltoPoint(sectionId) {
     }
 
     requestAnimationFrame(scrollAnimation);
+
+    if (sectionId === "my-code-text") {
+        if (topNav) {
+            topNav.style.backgroundColor = "#405e7d"; 
+        } else {
+            console.warn('Element with ID "top_nav" not found.');
+        }
+    }
 }
+
+
