@@ -103,24 +103,35 @@ button:hover {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    border-color: #9F2B68;
+   border: 1px solid #9F2B68;
+   transition: 0.5s ease;
 }
 
 #project_table th, #project_table td {
     text-align: left;
     padding: 12px;
+    border: 1px solid #9F2B68;
 }
 
+   
 #project_table th {
     color: #FFFFFF;
     border-color: #9F2B68;
+    transition: 0.5s ease;
+    background-color: #192531;
+}
+#project_table tr{
+    transition: 0.5s ease;
+
+
 }
 
+#project_table tr:nth-child(even){
+    transition: 0.5s ease;
+
+}
 #project_table tr:hover {
+    border-width: 1px;
     background-color: #9F2B68;
-    color: #FFFFFF;
-}
-
-#project_table td {
     color: #FFFFFF;
 }
