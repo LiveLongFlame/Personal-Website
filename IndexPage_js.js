@@ -56,3 +56,6 @@ function scrolltoPoint(sectionId) {
 }
 
 
+function path_finding_repo(){
+    window.open("https://github.com/LiveLongFlame/Personal-Projects");
+}
