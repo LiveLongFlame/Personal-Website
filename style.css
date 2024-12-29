@@ -46,16 +46,7 @@ button:hover {
 }
 
 
-#gitHub_btn, #linkedIn_btn{
-    max-width: 8%;
-    height: auto;
-    transition: 0.3s ease;
-}
 
-#gitHub_btn:hover,
-#linkedIn_btn:hover {
-    transform: scale(0.7);
-}
 
 
 #sub_info{
@@ -89,11 +80,11 @@ button:hover {
 }
 
 #top_nav {
-    position: fixed; /* Keeps it fixed if that's desired */
-    top: 0;          /* Position it at the top of the viewport */
-    left: 0;         /* Align to the left edge of the viewport */
-    width: 800%;     /* Ensures it spans the full width of the viewport */
-    background-color: transparent; /* Set your desired background color */
+    position: fixed; 
+    top: 0;         
+    left: 0;         
+    width: 800%;     
+    background-color: transparent; 
     z-index: 999;   
 }
 
@@ -137,4 +128,38 @@ button:hover {
 #python_ai_gif{
     max-width: 20%;
     height: auto;
+}
+
+
+
+#home_info{
+    padding-top: 200px;
+    padding-left: 50px;
+}
+
+
+#tab_side_bar{
+
+    float: right;
+    width: 8%;    
+    
+    background-color: #9F2B68;
+    border-radius: 8%;
+ 
+}
+
+#rotated_text{
+    display: inline-block; 
+    transform: rotate(270deg);
+}
+#gitHub_btn, #linkedIn_btn{
+    max-width: 60%;
+    float: right;
+    height: auto;
+    transition: 0.3s ease;
+}
+
+#gitHub_btn:hover,
+#linkedIn_btn:hover {
+    transform: scale(0.7);
 }
