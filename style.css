@@ -150,7 +150,10 @@ button:hover {
 
 .rotated_text{
     transform: rotate(270deg);
-    margin-right: 45px;
+    transform-origin:center;
+    margin-right: 30px;
+    margin-top: 30px;
+    font-size:35px ;
 }
 #gitHub_btn, #linkedIn_btn{
     max-width: 60%;
