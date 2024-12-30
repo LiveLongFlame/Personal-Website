@@ -46,13 +46,13 @@ function scrolltoPoint(sectionId) {
 
     requestAnimationFrame(scrollAnimation);
 
-    if (sectionId === "my-code-text") {
-        if (topNav) {
-            topNav.style.backgroundColor = "#405e7d"; 
-        } else {
-            console.warn('Element with ID "top_nav" not found.');
-        }
-    }
+   // if (sectionId === "my-code-text") {
+   //     if (topNav) {
+   //         topNav.style.backgroundColor = "#405e7d"; 
+   //     } else {
+   //         console.warn('Element with ID "top_nav" not found.');
+   //     }
+   // }
 }
 
 
