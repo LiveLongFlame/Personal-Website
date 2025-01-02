@@ -21,8 +21,9 @@ button {
    border-width: 2px;
     color: white;
     transition: 0.3s;
-    font-size: medium;
-    
+    font-size: 25px;
+   width: 250px;
+   height: 45px;
 }
 
 button:hover {
@@ -30,7 +31,6 @@ button:hover {
     background-color: #9F2B68;;
     border-color: #9F2B68;
 }
-
 
 
 #BackGroundImgae {
@@ -45,18 +45,13 @@ button:hover {
     padding: 0; 
 }
 
-
-
-
-
 #sub_info{
     display: flex;
-    font-size: small;
+    font-size: 20px;
 
 }
 
 #sub_text{
-    
     margin-right: 100px;
 }
 
@@ -66,7 +61,7 @@ button:hover {
     border-top: 2px solid ;
     border-bottom: 2px solid #2c4157;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-size: 20px;
   
 }
 
@@ -77,6 +72,7 @@ button:hover {
     padding: 15px;
     border: 2px solid ccccccccccccccccc;
     border-radius: 10px;
+    font-size: 30px; 
 }
 
 #top_nav {
@@ -94,6 +90,7 @@ button:hover {
     margin: 20px 0;
    border: 1px solid #9F2B68;
    transition: 0.5s ease;
+   font-size: 30px;
 }
 
 #project_table th, #project_table td {
@@ -126,7 +123,7 @@ button:hover {
 
 
 #python_ai_gif{
-    max-width: 20%;
+    max-width: 40%;
     height: auto;
 }
 
@@ -135,15 +132,14 @@ button:hover {
 #home_info{
     padding-top: 200px;
     padding-left: 50px;
+    font-size: 30px;
 }
 
 
 #tab_side_bar{
 
     float: right;
-    width: 8%;    
-    
-    background-color: #9F2B68;
+    width: 9%;    
     border-radius: 8%;
  
 }
@@ -153,7 +149,7 @@ button:hover {
     transform-origin:center;
     margin-right: 30px;
     margin-top: 30px;
-    font-size:35px ;
+    font-size:20px ;
 }
 #gitHub_btn, #linkedIn_btn{
     max-width: 60%;
