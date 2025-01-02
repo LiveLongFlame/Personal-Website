@@ -107,10 +107,11 @@ button:hover {
 }
 #project_table tr{
     transition: 0.5s ease;
-
-
 }
 
+#project_table th:hover , #project_table td:hover {
+    border-color: #621A40;
+}
 #project_table tr:nth-child(even){
     transition: 0.5s ease;
 
