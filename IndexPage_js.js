@@ -63,3 +63,7 @@ function path_finding_repo(){
 function cs50_project_repo() {
     window.open("https://github.com/LiveLongFlame/cs50_final_project");
   }
+
+  function personal_website_repo(){
+    window.open("https://github.com/LiveLongFlame/Personal-Website");
+}
