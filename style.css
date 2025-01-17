@@ -139,7 +139,7 @@ button:hover {
 
 #tab_side_bar{
 
-    float: right;
+    float: left;
     width: 9%;    
     border-radius: 8%;
  
@@ -154,7 +154,7 @@ button:hover {
 }
 #gitHub_btn, #linkedIn_btn{
     max-width: 60%;
-    float: right;
+    float: left;
     height: auto;
     transition: 0.3s ease;
 }
