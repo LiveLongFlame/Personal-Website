@@ -18,12 +18,12 @@ li{
 button {
    background-color: transparent;
    border-color: gray;
-   border-width: 2px;
+   border-width: 2.5px;
     color: white;
     transition: 0.3s;
     font-size: 25px;
-   width: 250px;
-   height: 45px;
+   width: 300px;
+   height: 80px;
 }
 
 button:hover {
