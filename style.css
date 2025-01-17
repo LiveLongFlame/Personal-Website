@@ -47,7 +47,7 @@ button:hover {
 
 #sub_info{
     display: flex;
-    font-size: 20px;
+    font-size: 25px;
 
 }
 
@@ -61,7 +61,7 @@ button:hover {
     border-top: 2px solid ;
     border-bottom: 2px solid #2c4157;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
   
 }
 
