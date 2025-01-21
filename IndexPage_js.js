@@ -67,3 +67,8 @@ function cs50_project_repo() {
   function personal_website_repo(){
     window.open("https://github.com/LiveLongFlame/Personal-Website");
 }
+
+function budget_tracker_repo(){
+    window.open("https://github.com/LiveLongFlame/Budget-Tracker");
+
+}
