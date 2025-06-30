@@ -107,47 +107,66 @@
    <br><br>
     <br><br>
     <br><br>
-     <div id="my-code-text" class="fade-section">
-        <h2><u>My Projects</u></h2>
-         <table id ="project_table">
-            <tr>
-                <th>Project</th>
-                <th>Description</th>
-                <th>Repository</th>
-              
-            </tr>
-            <tr onclick="path_finding_repo()">
+	<div id="my-code-text" class="fade-section">
+    <h2><u>My Projects</u></h2>
+    <div id="project_list">
+        <!-- Project 1 -->
+        <div class="project-entry" onclick="toggleProject('proj1')">A* Path Finding</div>
+        <div class="project-details" id="proj1">
+            <div class="project-info">
+                <div class="project-text" id="proj1-desc">
+                    <p>Loading description...</p>
+                </div>
+                <div class="project-image">
+                    <img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo">
+                </div>
+            </div>
+            <button onclick="path_finding_repo()">View on GitHub</button>
+        </div>
 
-                <td>A* Path Finding</td>    
-                <td>When finding two nodes placed by the user the program will find the shortest path avablie and display such path to the user</td>
-                <td> <img id="python_ai_gif" src="Pictures/PyhtonAI.gif"></img></td>
-               
+        <!-- Project 2 -->
+        <div class="project-entry" onclick="toggleProject('proj2')">Personal Website</div>
+        <div class="project-details" id="proj2">
+            <div class="project-info">
+                <div class="project-text" id="proj2-desc">
+                    <p>Loading description...</p>
+                </div>
+                <div class="project-image">
+                    <img src="Pictures/personal_website.gif" alt="Personal Website Demo">
+                </div>
+            </div>
+            <button onclick="personal_website_repo()">View on GitHub</button>
+        </div>
 
-            </tr>
-            <tr onclick="personal_website_repo()">
-                <td>Personal Website</td>    
-                <td> Is My personal website displaying and showing off all my skills and attributtes</td>
-                <td><img id="personal_webiste" src="Pictures/personal_website.gif"</img></td>
-               
+        <!-- Project 3 -->
+        <div class="project-entry" onclick="toggleProject('proj3')">CS50 Final Project</div>
+        <div class="project-details" id="proj3">
+            <div class="project-info">
+                <div class="project-text" id="proj3-desc">
+                    <p>Loading description...</p>
+                </div>
+                <div class="project-image">
+                    <img src="Pictures/cs50_project.gif" alt="CS50 Project Demo">
+                </div>
+            </div>
+            <button onclick="cs50_project_repo()">View on GitHub</button>
+        </div>
 
-            </tr>
-            <tr onclick="cs50_project_repo()">
-                <td>Cs50/Year 12 Final Project</td>    
-                <td>A Personal Fitness website where users have a login and password and can input there weight for differnt excerissess and reps. All data was stored in the sql database</td>
-                <td><img id="cs50_project" src="Pictures/cs50_project.gif"</img></td>
-               
-
-            </tr>
-            <tr onclick="budget_tracker_repo()">
-                <td>Budget Tracker</td>    
-                <td>A node js project where users can upload their own bank history of the account and the website will read the csv and organise the information and display information such as amount spent on the account or which catogories have the most spendings</td>
-                <td><img id="budget_tracker" src="Pictures/budget_tracker.gif"></img></td>
-               
-
-            </tr>
-         </table>
-     </div>
-
-</body>
+        <!-- Project 4 -->
+        <div class="project-entry" onclick="toggleProject('proj4')">Budget Tracker</div>
+        <div class="project-details" id="proj4">
+            <div class="project-info">
+                <div class="project-text" id="proj4-desc">
+                    <p>Loading description...</p>
+                </div>
+                <div class="project-image">
+                    <img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo">
+                </div>
+            </div>
+            <button onclick="budget_tracker_repo()">View on GitHub</button>
+        </div>
+    </div>
+</div>
+	   </body>
 </html>
 

@@ -1,6 +1,51 @@
 let aboutMeVisible = false;
 let myCodeVisible = false;
 let currentSection = "home";  // start at home
+let currentlyOpen = null;
+
+function loadReadme(projectId, githubUser, repoName) {
+    const descContainer = document.getElementById(`${projectId}-desc`);
+    const readmeUrl = `https://raw.githubusercontent.com/${githubUser}/${repoName}/main/README.md`;
+
+    fetch(readmeUrl)
+        .then(response => {
+            if (!response.ok) throw new Error("README not found");
+            return response.text();
+        })
+        .then(markdown => {
+            // Optional: Convert Markdown to plain text (or HTML with a library)
+            descContainer.innerText = markdown.slice(0, 800) + '...'; // preview only
+        })
+        .catch(error => {
+            descContainer.innerText = "Could not load README.";
+        });
+}
+
+function toggleProject(id) {
+    const details = document.getElementById(id);
+
+    if (currentlyOpen && currentlyOpen !== id) {
+        document.getElementById(currentlyOpen).style.display = "none";
+    }
+
+    if (details.style.display === "block") {
+        details.style.display = "none";
+        currentlyOpen = null;
+    } else {
+        details.style.display = "block";
+        currentlyOpen = id;
+
+        // Load README only the first time
+        if (!details.dataset.loaded) {
+            if (id === "proj1") loadReadme("proj1", "LiveLongFlame", "Personal-Projects");
+            else if (id === "proj2") loadReadme("proj2", "LiveLongFlame", "Personal-Website");
+            else if (id === "proj3") loadReadme("proj3", "LiveLongFlame", "cs50_final_project");
+            else if (id === "proj4") loadReadme("proj4", "LiveLongFlame", "Budget-Tracker");
+
+            details.dataset.loaded = "true";
+        }
+    }
+}
 function updateActiveButton(sectionName) {
 	const btnMap = {
 		home: document.getElementById("home_info_btn"),
