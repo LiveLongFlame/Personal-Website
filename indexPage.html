@@ -5,31 +5,35 @@
     <link rel="stylesheet" href="style.css">
     <script src="IndexPage_js.js" defer></script>
     <title>Valentino's Website</title>
-</head>
+	<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
 
-<body id="BackGroundImgae" background="Pictures/space_background.jpg">
-    <!-- Top Navigation -->
-    <div id="top_nav">
-        <br>
-        <button id="home_info_btn" onclick="scrolltoPoint('home_info')">Home</button>
-       <button id="about_me_btn" onclick="scrolltoPoint('about_me_scroll')">About me</button>
-       <button id="my_code_btn" onclick="scrolltoPoint('my-code-text')">Projects</button>
-    
-    </div>
-  
-     <!-- Home Info -->
-    <div id="home_info">
-        <br><br>
-        <h1><u><center>Valentino's Osorio Schwarz</center></u></h1>
-        <center>
-            <p>Self-learning software developer, through research <br> and development.  striving to do my best</p>
-            <p>Phone Number: 0490854889 || Email: valentinoosorioschwarz@gmail.com</p>
-        </center>
+<body id="BackGroundImgae" background="Pictures/dark_background.jpeg">
 
-    </div>
+	<!-- Home Info -->
+	<div id="home_info">
+		<br><br>
+		<h1><u><center>Valentino Osorio Schwarz</center></u></h1>
+		<center>
+			<p>Self-learning software developer, through research <br> and development.  striving to do my best</p>
+		</center>
 
-    <!-- Side Bar Buttons -->
-    <div id = "tab_side_bar">
+	</div>
+
+
+
+	<!-- Navigation Buttons -->
+	<div id="top_nav">
+		<div id="top_nav_buttons">
+			<button id="home_info_btn" onclick="scrolltoPoint('home_info')">Home</button>
+			<button id="about_me_btn" onclick="scrolltoPoint('about_me_scroll')">About me</button>
+			<button id="my_code_btn" onclick="scrolltoPoint('my-code-text')">Projects</button>
+		</div>
+	</div>
+
+
+   	<!-- Side Bar Buttons -->
+	<div id = "tab_side_bar">
         <img id="gitHub_btn" src="Pictures/Github-logo.png"onclick="gitHub_btn()"></img><br>
         <img id="linkedIn_btn" src="Pictures/Linkedin_img.png"onclick="linkedIn_btn()"></img>
     </div>

@@ -1,165 +1,179 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: #282c34;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background-color: #282c34;
 }
 
 h1 {
-    color: #b8bfdb;
-    text-shadow: 2px 2px 5px #000;
+	color: #b8860b; /* dark gold */
+	font-family: 'Uncial Antiqua', cursive;
+	font-weight: normal;
+	font-size: 5rem;
+	text-shadow: 1px 1px 2px #000; /* optional for a bit of glow/shadow */
 }
 
 li{
-    margin: 5px 0;
+	margin: 5px 0;
 }
 button {
-   background-color: transparent;
-   border-color: gray;
-   border-width: 2.5px;
-    color: white;
-    transition: 0.3s;
-    font-size: 25px;
-   width: 300px;
-   height: 80px;
+	background-color: transparent;
+	border-color: gray;
+	border-width: 2.5px;
+	color: white;
+	transition: 0.3s;
+	font-size: 25px;
+	width: 300px;
+	height: 80px;
 }
 
 button:hover {
-    transform: scale(0.9);
-    background-color: #9F2B68;;
-    border-color: #9F2B68;
+	transform: scale(0.9);
+	background-color: #9F2B68;;
+	border-color: #9F2B68;
 }
 
 
 #BackGroundImgae {
-    background-image: url("Pictures/abstract_background.jpg"); 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-    background-repeat: no-repeat; 
-    height: 100vh; 
-    width: 100%; 
-    margin: 0; 
-    padding: 0; 
+	background-image: url("Pictures/dark_background.jpeg"); 
+	background-size: cover; 
+	background-position: center; 
+	background-attachment: fixed; 
+	background-repeat: no-repeat; 
+	height: 100vh; 
+	width: 100%; 
+	margin: 0; 
+	padding: 0; 
 }
 
 #sub_info{
-    display: flex;
-    font-size: 25px;
+	display: flex;
+	font-size: 25px;
 
 }
 
 #sub_text{
-    margin-right: 100px;
+	margin-right: 100px;
 }
 
 .about_me {
-    margin: 20px auto;
-    background-color: #192531;
-    border-top: 2px solid ;
-    border-bottom: 2px solid #2c4157;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-  
+	margin: 20px auto;
+	background-color: #192531;
+	border-top: 2px solid ;
+	border-bottom: 2px solid #2c4157;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 30px;
+
 }
 
 
 #my-code-text {
-    display: display; 
-    margin-top: 20px;
-    padding: 15px;
-    border: 2px solid ccccccccccccccccc;
-    border-radius: 10px;
-    font-size: 30px; 
+	display: display; 
+	margin-top: 20px;
+	padding: 15px;
+	border: 2px solid ccccccccccccccccc;
+	border-radius: 10px;
+	font-size: 30px; 
 }
 
+
 #top_nav {
-    position: fixed; 
-    top: 0;         
-    left: 0;         
-    width: 800%;     
-    background-color: transparent; 
-    z-index: 999;   
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: transparent;
+	margin-top: 20px; /* space under home_info */ 
+
+}
+
+
+#top_nav_buttons {
+	display: flex;
+	flex-direction: column;      /* Stack buttons vertically */
+	align-items: center;         /* Center the button stack */
+	gap: 10px;                   /* Add spacing between buttons */
 }
 
 #project_table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-   border: 1px solid #9F2B68;
-   transition: 0.5s ease;
-   font-size: 30px;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	border: 1px solid #9F2B68;
+	transition: 0.5s ease;
+	font-size: 30px;
 }
 
 #project_table th, #project_table td {
-    text-align: left;
-    border: 1px solid #9F2B68;
+	text-align: left;
+	border: 1px solid #9F2B68;
 }
 
-   
+
 #project_table th {
-    color: #FFFFFF;
-    border-color: #9F2B68;
-    transition: 0.5s ease;
-    background-color: #192531;
+	color: #FFFFFF;
+	border-color: #9F2B68;
+	transition: 0.5s ease;
+	background-color: #192531;
 }
 #project_table tr{
-    transition: 0.5s ease;
+	transition: 0.5s ease;
 }
 
 #project_table th:hover , #project_table td:hover {
-    border-color: #621A40;
+	border-color: #621A40;
 }
 #project_table tr:nth-child(even){
-    transition: 0.5s ease;
+	transition: 0.5s ease;
 
 }
 #project_table tr:hover {
-    border-width: 1px;
-    background-color: #9F2B68;
-    color: #FFFFFF;
+	border-width: 1px;
+	background-color: #9F2B68;
+	color: #FFFFFF;
 }
 
 
 #python_ai_gif ,#personal_webiste , #cs50_project, #budget_tracker{
-    max-width: 40%;
-    height: auto;
+	max-width: 40%;
+	height: auto;
 }
 
 
 
 #home_info{
-    padding-top: 200px;
-    padding-left: 50px;
-    font-size: 30px;
+	font-family: 'MedievalSharp', cursive;
+	font-weight: normal;
+	font-size: 3rem;
+	text-shadow: 1px 1px 2px #000; padding-top: 200px;
+	padding-left: 50px;
 }
 
 
 #tab_side_bar{
 
-    float: left;
-    width: 9%;    
-    border-radius: 8%;
- 
+	float: left;
+	width: 9%;    
+	border-radius: 8%;
+
 }
 
 .rotated_text{
-    transform: rotate(270deg);
-    transform-origin:center;
-    margin-right: 30px;
-    margin-top: 30px;
-    font-size:20px ;
+	transform: rotate(270deg);
+	transform-origin:center;
+	margin-right: 30px;
+	margin-top: 30px;
+	font-size:20px ;
 }
 #gitHub_btn, #linkedIn_btn{
-    max-width: 60%;
-    float: left;
-    height: auto;
-    transition: 0.3s ease;
+	max-width: 60%;
+	float: left;
+	height: auto;
+	transition: 0.3s ease;
 }
 
 #gitHub_btn:hover,
 #linkedIn_btn:hover {
-    transform: scale(0.7);
+	transform: scale(0.7);
 }
