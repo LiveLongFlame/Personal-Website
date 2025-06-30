@@ -4,7 +4,7 @@ const path = require("path"); // to handle file extensions
 const port = 3000;
 
 const server = http.createServer(function (req, res) {
-  let filePath = req.url === "/" ? "indexPage.html" : req.url.slice(1);
+  let filePath = req.url === "/" ? "index.html" : req.url.slice(1);
   let extname = path.extname(filePath);
 
   // Default to 'html' if no extension is provided (for '/'
