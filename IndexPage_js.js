@@ -1,24 +1,27 @@
 let aboutMeVisible = false;
 let myCodeVisible = false;
 
-
 function showSection(sectionName) {
     const aboutMe = document.getElementById("about_me");
     const projects = document.getElementById("my-code-text");
+    const contact = document.getElementById("contact_info");
+
+    // Hide all first
+    aboutMe.style.display = "none";
+    projects.style.display = "none";
+    contact.style.display = "none";
 
     if (sectionName === "home") {
-        aboutMe.style.display = "none";
-        projects.style.display = "none";
+        // nothing to show except home_info (which is always visible)
     } else if (sectionName === "about") {
         aboutMe.style.display = "block";
-        projects.style.display = "none";
     } else if (sectionName === "projects") {
-        aboutMe.style.display = "none";
         projects.style.display = "block";
+    } else if (sectionName === "contact") {
+        contact.style.display = "block";
     }
 }
 
-// Assign button click handlers
 document.getElementById("home_info_btn").onclick = function () {
     showSection("home");
 };
@@ -30,6 +33,12 @@ document.getElementById("about_me_btn").onclick = function () {
 document.getElementById("my_code_btn").onclick = function () {
     showSection("projects");
 };
+
+document.getElementById("contact_btn").onclick = function () {
+    showSection("contact");
+};
+
+
 
 function gitHub_btn() {
     window.open("https://github.com/LiveLongFlame");
