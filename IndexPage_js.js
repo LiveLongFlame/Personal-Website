@@ -1,63 +1,180 @@
 let aboutMeVisible = false;
 let myCodeVisible = false;
+let currentSection = "home";  // start at home
+function updateActiveButton(sectionName) {
+	const btnMap = {
+		home: document.getElementById("home_info_btn"),
+		about: document.getElementById("about_me_btn"),
+		projects: document.getElementById("my_code_btn"),
+		contact: document.getElementById("contact_btn")
+	};
+
+	// Remove .active from all
+	Object.values(btnMap).forEach(btn => btn.classList.remove("active"));
+
+	// Add .active to the matching one
+	if (btnMap[sectionName]) {
+		btnMap[sectionName].classList.add("active");
+	}
+}
+function fadeOutElements(elements, duration = 600) {
+    return new Promise(resolve => {
+        elements.forEach(el => {
+            if (el.classList.contains("visible")) {
+                el.classList.remove("visible");
+                setTimeout(() => {
+                    el.style.display = "none";
+                }, duration);
+            }
+        });
+        setTimeout(resolve, duration);
+    });
+}
+
+function fadeInElement(element) {
+    element.style.display = "block";
+    setTimeout(() => {
+        element.classList.add("visible");
+    }, 20);
+}
+
 function showSection(sectionName) {
+	updateActiveButton(sectionName);
     const sections = {
         about: document.getElementById("about_me"),
         projects: document.getElementById("my-code-text"),
         contact: document.getElementById("contact_info"),
     };
 
+    const headings = {
+        about: document.getElementById("about_heading"),
+        projects: document.getElementById("project_heading"),
+        contact: document.getElementById("contact_heading"),
+    };
+
     const home = document.getElementById("home_info");
     const navButtons = document.getElementById("top_nav_buttons");
 
-    // Hide home
-    home.classList.remove("visible");
-    home.style.display = "none";
+    if (currentSection === "home" && sectionName !== "home") {
+        // From Home to other section => fade nav buttons, fade home_info + fade in new section + heading
+        navButtons.classList.add("fading-out");
+        return fadeOutElements([home], 600).then(() => {
+            home.classList.remove("visible");
+            home.style.display = "none";
 
-    // Set nav to horizontal layout
-    navButtons.classList.add("horizontal-layout");
+            navButtons.classList.add("horizontal-layout");
 
-    // Hide all sections
-    Object.values(sections).forEach(section => {
-        section.classList.remove("visible");
-        section.style.display = "none";
-    });
+            // Hide all sections and headings
+            Object.values(sections).forEach(s => {
+                s.classList.remove("visible");
+                s.style.display = "none";
+            });
+            Object.values(headings).forEach(h => {
+                h.classList.remove("visible");
+                h.style.display = "none";
+            });
 
-    // Show the selected section after short delay
-    setTimeout(() => {
-        const selected = sections[sectionName];
-        selected.style.display = "block"; // Must set this before fade in
-        setTimeout(() => {
-            selected.classList.add("visible");
-        }, 20); // delay to allow display to apply
-    }, 200);
+            // Show new heading and section
+            fadeInElement(headings[sectionName]);
+            fadeInElement(sections[sectionName]);
+
+            // Fade nav buttons back in
+            navButtons.classList.remove("fading-out");
+            navButtons.classList.add("fading-in");
+
+            setTimeout(() => {
+                navButtons.classList.remove("fading-in");
+            }, 600);
+
+            currentSection = sectionName;
+        });
+    } else if (currentSection !== "home" && sectionName !== "home") {
+        // Between other sections (about/projects/contact) - no nav fade, just fade sections and headings
+        return fadeOutElements([sections[currentSection], headings[currentSection]], 400).then(() => {
+            fadeInElement(headings[sectionName]);
+            fadeInElement(sections[sectionName]);
+            currentSection = sectionName;
+        });
+    } else {
+        // Other cases like to home are handled in fadeToHome()
+        return Promise.resolve();
+    }
 }
-// Navigation
+
+function fadeToHome() {
+    const sections = [
+        document.getElementById("about_me"),
+        document.getElementById("my-code-text"),
+        document.getElementById("contact_info"),
+    ];
+    const headings = [
+        document.getElementById("about_heading"),
+        document.getElementById("project_heading"),
+        document.getElementById("contact_heading"),
+    ];
+    const home = document.getElementById("home_info");
+    const navButtons = document.getElementById("top_nav_buttons");
+
+    if (currentSection !== "home") {
+        navButtons.classList.add("fading-out");
+
+        return fadeOutElements([...sections, ...headings], 600).then(() => {
+            // Show home and fade in
+            home.style.display = "block";
+            setTimeout(() => {
+                home.classList.add("visible");
+            }, 20);
+
+            // Remove horizontal layout
+            navButtons.classList.remove("horizontal-layout");
+
+            // Remove active button highlights
+            document.querySelectorAll("#top_nav_buttons button").forEach(btn => btn.classList.remove("active"));
+
+            // Fade nav buttons back in
+            navButtons.classList.remove("fading-out");
+            navButtons.classList.add("fading-in");
+
+            setTimeout(() => {
+                navButtons.classList.remove("fading-in");
+            }, 600);
+
+            currentSection = "home";
+        });
+    }
+}
+
+// Navigation button handlers (unchanged)
 document.getElementById("about_me_btn").onclick = function () {
-	document.getElementById("contact_heading").style.display = "none";
-	document.getElementById("about_heading").style.display = "block";
-	document.getElementById("project_heading").style.display = "none";
+    document.getElementById("contact_heading").style.display = "none";
+    document.getElementById("about_heading").style.display = "block";
+    document.getElementById("project_heading").style.display = "none";
 
     showSection("about");
 };
 
 document.getElementById("my_code_btn").onclick = function () {
-	document.getElementById("contact_heading").style.display = "none";
-	document.getElementById("about_heading").style.display = "none";
-	document.getElementById("project_heading").style.display = "block";
+    document.getElementById("contact_heading").style.display = "none";
+    document.getElementById("about_heading").style.display = "none";
+    document.getElementById("project_heading").style.display = "block";
 
     showSection("projects");
 };
 
 document.getElementById("contact_btn").onclick = function () {
-	document.getElementById("contact_heading").style.display = "block";
-	document.getElementById("about_heading").style.display = "none";
-	document.getElementById("project_heading").style.display = "none";
+    document.getElementById("contact_heading").style.display = "block";
+    document.getElementById("about_heading").style.display = "none";
+    document.getElementById("project_heading").style.display = "none";
+
     showSection("contact");
 };
 
 document.getElementById("home_info_btn").onclick = function () {
-    location.reload(); // refresh resets all layout/state
+    document.getElementById("contact_heading").style.display = "none";
+    document.getElementById("about_heading").style.display = "none";
+    document.getElementById("project_heading").style.display = "none";
+
+    fadeToHome();
 };
 
 function gitHub_btn() {

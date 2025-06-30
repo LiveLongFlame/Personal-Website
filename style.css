@@ -55,6 +55,21 @@ button:active {
 	transform: scale(0.98);
 	box-shadow: inset 0 0 8px #222;
 }
+
+button.active {
+	color: #d4af37; /* Gold text */
+	background-color: rgba(50, 50, 50, 0.3); /* Semi-transparent grey */
+	border-color: #d4af37; /* Gold border */
+	text-shadow:
+		0 0 5px #d4af37,
+		0 0 10px #b8860b,
+		1px 1px 2px #000;
+	box-shadow:
+		0 0 10px #d4af37,
+		0 0 20px rgba(212, 175, 55, 0.5),
+		0 0 30px rgba(128, 128, 128, 0.4); /* Gold + Grey underglow */
+	transform: scale(1.03);
+}
 #BackGroundImgae {
 	background-image: url("Pictures/dark_background.jpeg"); 
 	background-size: cover; 
@@ -326,7 +341,19 @@ button:active {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    transition: all 0.5s ease;
+	 opacity: 1;
+    transition: opacity 0.6s ease;
+    pointer-events: auto; /* ensure buttons clickable normally */
+}
+
+#top_nav_buttons.fading-out {
+    opacity: 0;
+    pointer-events: none; /* disable clicks while faded out */
+}
+
+#top_nav_buttons.fading-in {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .horizontal-layout {
