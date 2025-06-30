@@ -9,5 +9,6 @@
 
  Thank you for takeing the time to enjoy my website and my projects I hope you very much enjoy 😊😊
 
+![website gif][Pictures/personal_website.gif]
 🚨🚨Important🚨🚨 
 In order to the run the program you can use node js. Install node and run node app.js inside the terminal for the program to run on your localhost
