@@ -120,14 +120,18 @@ button:active {
 }
 
 #my-code-text {
-	display: display; 
-	margin-top: 20px;
-	padding: 15px;
-	border: 2px solid ccccccccccccccccc;
-	border-radius: 10px;
-	font-size: 30px; 
+	margin-top: 40px;
+	padding: 20px;
+	border: 3px solid #b8860b; /* dark gold */
+	border-radius: 15px;
+	background: linear-gradient(145deg, #1a1a1a, #111); /* dark dungeon tone */
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8),
+	            0 0 15px rgba(212, 175, 55, 0.2);
+	font-family: 'Merriweather', serif;
+	color: #f0f0f0;
+	text-shadow: 1px 1px 2px #000;
+	font-size: 26px;
 }
-
 
 #top_nav {
 	width: 100%;
@@ -149,41 +153,73 @@ button:active {
 #project_table {
 	width: 100%;
 	border-collapse: collapse;
-	margin: 20px 0;
-	border: 1px solid #9F2B68;
-	transition: 0.5s ease;
-	font-size: 30px;
+	margin-top: 20px;
+	font-size: 22px;
+	color: #ffffff;
+	background-color: #111; /* dark table base */
+	border: 2px solid #b8860b; /* gold frame */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-#project_table th, #project_table td {
+
+#project_table th,
+#project_table td {
+	border: 1px solid #444; /* stone grey border lines */
+	padding: 15px;
 	text-align: left;
-	border: 1px solid #9F2B68;
 }
-
 
 #project_table th {
-	color: #FFFFFF;
-	border-color: #9F2B68;
-	transition: 0.5s ease;
-	background-color: #192531;
-}
-#project_table tr{
-	transition: 0.5s ease;
+	background-color: #222;
+	color: #d4af37; /* gold headings */
+	text-shadow: 1px 1px 2px #000;
+	font-family: 'Uncial Antiqua', cursive;
 }
 
-#project_table th:hover , #project_table td:hover {
-	border-color: #621A40;
+#project_table tr {
+	background-color: #1c1c1c;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	cursor: pointer;
 }
-#project_table tr:nth-child(even){
-	transition: 0.5s ease;
 
+#project_table tr:nth-child(even) {
+	background-color: #1a1a1a;
 }
+
 #project_table tr:hover {
-	border-width: 1px;
-	background-color: #9F2B68;
-	color: #FFFFFF;
+	background-color: rgba(50, 50, 50, 0.9); /* subtle hover */
+	transform: scale(1.01);
+	box-shadow:
+		0 0 10px rgba(212, 175, 55, 0.2),
+		0 0 20px rgba(212, 175, 55, 0.15);
 }
 
+#project_table td img {
+	max-width: 100%;
+	border-radius: 8px;
+	border: 2px solid #444;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#project_table td img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 10px #b8860b;
+}
+
+#my-code-text h2 {
+	text-align: center;
+	color: #d4af37;
+	font-family: 'Uncial Antiqua', cursive;
+	font-size: 3rem;
+	text-shadow: 1px 1px 2px #000;
+}
+
+#project_table tr:hover {
+	background-color: #2a2a2a;
+	transform: scale(1.01);
+	box-shadow: 0 0 10px #d4af37;
+	color: #d4af37;
+}
 
 #python_ai_gif ,#personal_webiste , #cs50_project, #budget_tracker{
 	max-width: 40%;
