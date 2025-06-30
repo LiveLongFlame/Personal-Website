@@ -34,14 +34,25 @@ function showSection(sectionName) {
 }
 // Navigation
 document.getElementById("about_me_btn").onclick = function () {
+	document.getElementById("contact_heading").style.display = "none";
+	document.getElementById("about_heading").style.display = "block";
+	document.getElementById("project_heading").style.display = "none";
+
     showSection("about");
 };
 
 document.getElementById("my_code_btn").onclick = function () {
+	document.getElementById("contact_heading").style.display = "none";
+	document.getElementById("about_heading").style.display = "none";
+	document.getElementById("project_heading").style.display = "block";
+
     showSection("projects");
 };
 
 document.getElementById("contact_btn").onclick = function () {
+	document.getElementById("contact_heading").style.display = "block";
+	document.getElementById("about_heading").style.display = "none";
+	document.getElementById("project_heading").style.display = "none";
     showSection("contact");
 };
 
