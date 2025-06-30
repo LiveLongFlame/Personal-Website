@@ -67,6 +67,11 @@ button:active {
 	padding: 0; 
 }
 
+#about_me,
+#my-code-text {
+	display: none;
+}
+
 
 #sub_info {
 	display: flex;

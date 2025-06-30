@@ -2,32 +2,53 @@ let aboutMeVisible = false;
 let myCodeVisible = false;
 
 
-function my_code_btn() {
-    const myCodeText = document.getElementById("my-code-text");
-    myCodeVisible = !myCodeVisible;
-    myCodeText.style.display = myCodeVisible ? "block" : "none";
+function showSection(sectionName) {
+    const aboutMe = document.getElementById("about_me");
+    const projects = document.getElementById("my-code-text");
 
+    if (sectionName === "home") {
+        aboutMe.style.display = "none";
+        projects.style.display = "none";
+    } else if (sectionName === "about") {
+        aboutMe.style.display = "block";
+        projects.style.display = "none";
+    } else if (sectionName === "projects") {
+        aboutMe.style.display = "none";
+        projects.style.display = "block";
+    }
 }
 
-function gitHub_btn(){
+// Assign button click handlers
+document.getElementById("home_info_btn").onclick = function () {
+    showSection("home");
+};
+
+document.getElementById("about_me_btn").onclick = function () {
+    showSection("about");
+};
+
+document.getElementById("my_code_btn").onclick = function () {
+    showSection("projects");
+};
+
+function gitHub_btn() {
     window.open("https://github.com/LiveLongFlame");
 }
 
-
-function linkedIn_btn(){
+function linkedIn_btn() {
     window.open("https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/");
 }
 
-
 function scrolltoPoint(sectionId) {
     const section = document.getElementById(sectionId);
-    const targetPosition = section.offsetTop;  
+    const targetPosition = section.offsetTop;
     const topNav = document.getElementById("top_nav");
-    topNav.style.backgroundColor = "transparent"; 
-    let currentPosition = window.pageYOffset;  
-    let distance = targetPosition - currentPosition;  
-    let duration = 400;  
-    let startTime = null;  
+    topNav.style.backgroundColor = "transparent";
+
+    let currentPosition = window.pageYOffset;
+    let distance = targetPosition - currentPosition;
+    let duration = 400;
+    let startTime = null;
 
     function scrollAnimation(currentTime) {
         if (startTime === null) {
@@ -35,9 +56,9 @@ function scrolltoPoint(sectionId) {
         }
 
         let timeElapsed = currentTime - startTime;
-        let progress = Math.min(timeElapsed / duration, 1);  
+        let progress = Math.min(timeElapsed / duration, 1);
 
-        window.scrollTo(0, currentPosition + distance * progress);  
+        window.scrollTo(0, currentPosition + distance * progress);
 
         if (progress < 1) {
             requestAnimationFrame(scrollAnimation);
@@ -45,30 +66,21 @@ function scrolltoPoint(sectionId) {
     }
 
     requestAnimationFrame(scrollAnimation);
-
-   // if (sectionId === "my-code-text") {
-   //     if (topNav) {
-   //         topNav.style.backgroundColor = "#405e7d"; 
-   //     } else {
-   //         console.warn('Element with ID "top_nav" not found.');
-   //     }
-   // }
 }
 
-
-function path_finding_repo(){
+function path_finding_repo() {
     window.open("https://github.com/LiveLongFlame/Personal-Projects");
 }
 
 function cs50_project_repo() {
     window.open("https://github.com/LiveLongFlame/cs50_final_project");
-  }
+}
 
-  function personal_website_repo(){
+function personal_website_repo() {
     window.open("https://github.com/LiveLongFlame/Personal-Website");
 }
 
-function budget_tracker_repo(){
+function budget_tracker_repo() {
     window.open("https://github.com/LiveLongFlame/Budget-Tracker");
-
 }
+
