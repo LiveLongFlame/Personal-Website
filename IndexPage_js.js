@@ -41,6 +41,7 @@ function toggleProject(id) {
             else if (id === "proj2") loadReadme("proj2", "LiveLongFlame", "Personal-Website");
             else if (id === "proj3") loadReadme("proj3", "LiveLongFlame", "cs50_final_project");
             else if (id === "proj4") loadReadme("proj4", "LiveLongFlame", "Budget-Tracker");
+            else if (id === "proj5") loadReadme("proj5", "LiveLongFlame", "Terminal_Webpage");
 
             details.dataset.loaded = "true";
         }
@@ -243,5 +244,8 @@ function personal_website_repo() {
 
 function budget_tracker_repo() {
     window.open("https://github.com/LiveLongFlame/Budget-Tracker");
+}
+function cli_webpage() {
+    window.open("https://github.com/LiveLongFlame/Terminal_Webpage");
 }
 
