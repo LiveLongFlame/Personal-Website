@@ -140,8 +140,10 @@ button.active {
 }
 
 #my-code-text {
+	margin: 40px auto;
 	margin-top: 40px;
 	padding: 20px;
+	max-width: 3000px;
 	border: 3px solid #b8860b; /* dark gold */
 	border-radius: 15px;
 	background: linear-gradient(145deg, #1a1a1a, #111); /* dark dungeon tone */
@@ -396,6 +398,7 @@ button.active {
 }
 
 #project_list {
+	margin: 0 auto;
     border: 2px solid #b8860b;
     padding: 20px;
     border-radius: 12px;
