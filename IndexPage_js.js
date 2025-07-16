@@ -42,6 +42,7 @@ function toggleProject(id) {
             else if (id === "proj3") loadReadme("proj3", "LiveLongFlame", "cs50_final_project");
             else if (id === "proj4") loadReadme("proj4", "LiveLongFlame", "Budget-Tracker");
             else if (id === "proj5") loadReadme("proj5", "LiveLongFlame", "Terminal_Webpage");
+            else if (id === "proj6") loadReadme("proj6", "LiveLongFlame", "Maze_game");
 
             details.dataset.loaded = "true";
         }
@@ -247,5 +248,8 @@ function budget_tracker_repo() {
 }
 function cli_webpage() {
     window.open("https://github.com/LiveLongFlame/Terminal_Webpage");
+}
+function maze_game() {
+    window.open("https://github.com/LiveLongFlame/Maze_game");
 }
 
