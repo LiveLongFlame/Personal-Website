@@ -79,43 +79,75 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
+        <h2><u>My Projects</u></h2>
+    
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                    <th>Demo</th>
+                    <th>GitHub</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        <div class="project">
-            <h3>A* Path Finding</h3>
-            <p>Loading description...</p>
-            <img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo">
-        </div>
-
-        <div class="project">
-            <h3>Personal Website</h3>
-            <p>Loading description...</p>
-            <img src="Pictures/personal_website.gif" alt="Personal Website Demo">
-        </div>
-
-        <div class="project">
-            <h3>CS50 Final Project</h3>
-            <p>Loading description...</p>
-            <img src="Pictures/cs50_project.gif" alt="CS50 Project Demo">
-        </div>
-
-        <div class="project">
-            <h3>Budget Tracker</h3>
-            <p>Loading description...</p>
-            <img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo">
-        </div>
-
-        <div class="project">
-            <h3>CLI Webpage</h3>
-            <p>Loading description...</p>
-            <img src="Pictures/cli_webpage.gif" alt="CLI Webpage Demo">
-        </div>
-
-        <div class="project">
-            <h3>Maze Game</h3>
-            <p>Loading description...</p>
-            <img src="Pictures/maze_game.gif" alt="Maze Game Demo">
-        </div>
+                <!-- Project in dev -->
+                <tr onclick="toggleProject('proj7')">
+                    <td>SERAX Forex Algo</td>
+                    <td id="proj7-desc">Loading description...</td>
+                    <td>Still Developing</td>
+                    <td><button onclick="event.stopPropagation(); serax_forex_repo()">View</button></td>
+                </tr>
+                <!-- Project 1 -->
+                <tr onclick="toggleProject('proj1')">
+                    <td>A* Path Finding</td>
+                    <td id="proj1-desc">Loading description...</td>
+                    <td><img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo"></td>
+                    <td><button onclick="event.stopPropagation(); path_finding_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 2 -->
+                <tr onclick="toggleProject('proj2')">
+                    <td>Personal Website</td>
+                    <td id="proj2-desc">Loading description...</td>
+                    <td><img src="Pictures/personal_website.gif" alt="Personal Website Demo"></td>
+                    <td><button onclick="event.stopPropagation(); personal_website_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 3 -->
+                <tr onclick="toggleProject('proj3')">
+                    <td>CS50 Final Project</td>
+                    <td id="proj3-desc">Loading description...</td>
+                    <td><img src="Pictures/cs50_project.gif" alt="CS50 Project Demo"></td>
+                    <td><button onclick="event.stopPropagation(); cs50_project_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 4 -->
+                <tr onclick="toggleProject('proj4')">
+                    <td>Budget Tracker</td>
+                    <td id="proj4-desc">Loading description...</td>
+                    <td><img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo"></td>
+                    <td><button onclick="event.stopPropagation(); budget_tracker_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 5 -->
+                <tr onclick="toggleProject('proj5')">
+                    <td>CLI Webpage</td>
+                    <td id="proj5-desc">Loading description...</td>
+                    <td><img src="Pictures/cli_webpage.gif" alt="CLI Webpage Demo"></td>
+                    <td><button onclick="event.stopPropagation(); cli_webpage()">View</button></td>
+                </tr>
+    
+                <!-- Project 6 -->
+                <tr onclick="toggleProject('proj6')">
+                    <td>Maze Game</td>
+                    <td id="proj6-desc">Loading description...</td>
+                    <td><img src="Pictures/maze_game.gif" alt="Maze Game Demo"></td>
+                    <td><button onclick="event.stopPropagation(); maze_game()">View</button></td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
   
