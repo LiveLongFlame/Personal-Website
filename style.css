@@ -13,7 +13,6 @@ h1, h2, h3 {
     font-family: 'Merriweather', serif;
     text-align: center;
     margin-top: 50px;
-    text-shadow: 1px 1px 2px #000;
 }
 
 p, li {
@@ -29,7 +28,6 @@ ul {
 
 section {
     padding: 100px 100px;
-    background: rgba(20, 20, 20, 0.8);
     margin: 30px auto;
     border-radius: 15px;
     max-width: 1500px;
@@ -150,35 +148,67 @@ section {
 }
 /* Navigation Section */
 #navigation {
-    display: flex;
-    justify-content: center;       /* center the buttons */
-    align-items: center;
-    background: rgba(20,20,20,0.8); /* optional: same style as sections */
+    position: fixed;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
-.nav-buttons {
+.nav-panel {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;                /* allows buttons to wrap on smaller screens */
+    flex-direction: column;
+    gap: 15px;
 }
 
+/* Base Button - Circular, Black & White */
 .nav-btn {
-    padding: 10px 25px;
-    background-color: white;   /* default boring white */
-    color: #111;               /* text color */
+    width: 60px;
+    height: 60px;
+    background-color: #111;   /* black */
+    color: #fff;              /* white text */
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+    font-size: 14px;
 }
 
+/* Hover: expand and add color */
 .nav-btn:hover {
-    /* colorful hover effect */
-    background: linear-gradient(45deg, #d4af37, #ff6b6b, #6a5acd);
-    color: #fff;
-    transform: scale(1.05); /* subtle zoom */
-    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    width: 140px;
+    border-radius: 12px;
+    padding-left: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Hover background + text colors */
+.nav-btn.home:hover {
+    background: #ff9a3c;      /* orange */
+    color: #fffacd;
+}
+
+.nav-btn.about:hover {
+    background: #4a90e2;      /* blue */
+    color: #a0d8ff;
+}
+
+.nav-btn.projects:hover {
+    background: #e74c3c;      /* red */
+    color: #ffb3b3;
+}
+
+/* Optional: active & focus states */
+.nav-btn:active,
+.nav-btn:focus {
+    transform: translateX(2px);
+    outline: none;
 }
 /* Footer Credit */
 #footer_credit {
