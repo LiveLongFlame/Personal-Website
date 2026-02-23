@@ -17,7 +17,6 @@ function toggleProject(id) {
 const projectReadmes = {
     proj1: "Implemented A* pathfinding with visualizations in Python. Optimized for speed and grid-based mazes.",
     proj2: "This personal website is built with HTML, CSS, JS showcasing projects, skills, and achievements.",
-    proj3: "CS50 final project: a web-based application combining database and frontend features.",
     proj4: "Budget Tracker: Tracks income and expenses with charts and summaries using JS and PHP backend.",
     proj5: "Terminal-based interactive CLI webpage using ncurses for project showcase.",
     proj6: "Maze Game: Procedural maze generator and solver implemented in C++ with interactive gameplay.",
@@ -32,9 +31,11 @@ window.onload = () => {
 };
 
 // GitHub buttons
-function path_finding_repo() { window.open("https://github.com/LiveLongFlame/AStar-Pathfinding", "_blank"); }
+function path_finding_repo() { window.open("https://github.com/LiveLongFlame/A_star_path_finder", "_blank"); }
 function personal_website_repo() { window.open("https://github.com/LiveLongFlame/personal-website", "_blank"); }
-function cs50_project_repo() { window.open("https://github.com/LiveLongFlame/CS50-Final-Project", "_blank"); }
 function budget_tracker_repo() { window.open("https://github.com/LiveLongFlame/Budget-Tracker", "_blank"); }
-function cli_webpage() { window.open("https://github.com/LiveLongFlame/CLI-Webpage", "_blank"); }
-function maze_game() { window.open("https://github.com/LiveLongFlame/Maze-Game", "_blank"); }
+function cli_webpage() { window.open("https://github.com/LiveLongFlame/Terminal_Webpage", "_blank"); }
+function maze_game() { window.open("https://github.com/LiveLongFlame/Maze_game", "_blank"); }
+function serax_forex_repo() { 
+    window.open("https://github.com/LiveLongFlame/SERAX_Forex_algo", "_blank"); 
+}
