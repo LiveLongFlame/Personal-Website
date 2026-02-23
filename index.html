@@ -1,203 +1,160 @@
+<!DOCTYPE html>
 <html lang="en">
+<script src="script.js"></script>    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="IndexPage_js.js" defer></script>
     <title>Valentino's Website</title>
-	<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
-
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="BackGroundImgae" background="Pictures/dark_background.jpeg">
-
-	<!-- Home Info -->
-	<div id="home_info" class="visible">
-		<br><br>
-		<h1><u><center>Valentino Osorio Schwarz</center></u></h1>
-		<center>
-			<p>Self-learning software developer, through research <br> and development.  striving to do my best</p>
-		</center>
-
-	</div>
-
-		<br><br>
-		<br><br>
-		<br><br>
-	
-	<h1 id="about_heading" class="fade-section" style="display:none;" ><u><center>About Me</center></u></h1>
-	<h1 id="project_heading"  class="fade-section" style="display:none;"><u><center>My Projects</center></u></h1>
-	<h1 id="contact_heading" class="fade-section" style="display:none;"><u><center>Contact Information</center></u></h1>
-	<!-- Navigation Buttons -->
-	<div id="top_nav" class="visible">
-		<div id="top_nav_buttons" class="visible">
-			<button id="home_info_btn" onclick="scrolltoPoint('home_info')">Home</button>
-			<button id="about_me_btn" onclick="scrolltoPoint('about_me_scroll')">About me</button>
-			<button id="my_code_btn" onclick="scrolltoPoint('my-code-text')">Projects</button>
-
-			<button id="contact_btn">Contact</button>
-
-		</div>
-	</div>
-
-
-    <br><br>
-    <br><br>
-    <br><br> 
-	<!-- Contact Information -->
-	<div id="contact_info" class="fade-section">
-		<h2><u>Contact Information</u></h2>
-		<ul>
-			<li><strong>GitHub:</strong> <a href="https://github.com/LiveLongFlame" target="_blank">github.com/LiveLongFlame</a></li>
-			<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/" target="_blank">linkedin.com/in/valentino-osorio-schwarz-b05842258</a></li>
-			<li><strong>Email:</strong> <a href="mailto:valentinosorioschwarz@gmail.com">valentinosorioschwarz@gmail.com</a></li>
-		</ul>
-	</div>
-	<!-- About Me Text -->
-	<div id="about_me" class="about_me fade-section"> 
-        
-        <div id="about-me-text">
-            <h2><u>About Me</u> </h2>
-            <p>
-                My name is Valentino Osorio Schwarz, I'm currently a second year Computer Science student at the Royal Melbourne University of Technology (RMIT) who loves to code and create new and innovative projects. I've been coding for 5 years now, and want to document all my personal projects and my achievements on this website to show off and demonstrate my skills as a software developer.  
+<body>
+    <section id="navigation">
+        <div class="nav-panel">
+            <a href="#home" class="nav-btn home">Home</a>
+            <a href="#about_me" class="nav-btn about">About Me</a>
+            <a href="#projects" class="nav-btn projects">Projects</a>
+        </div>
+    </section>
+    <!-- Home Section -->
+    <section id="home">
+        <div id="left">
+            <div id="icon">
+                <img src="Pictures/pixel-man.png">
+            </div>
+            <p class="tagline">
+                “First, solve the problem. Then, write the code.”
             </p>
-            <div id="sub_info">
-                <div id="sub_text">
-                    <br>
-                    <h3>Hobbies</h3>
-                    <p>
-                        <ul>
-                         <li>Enjoys track and field, especially High Jump, Triple Jump, and sprints (100m, 200m).</li><br>
-                         <li>Loves solving Rubik's cubes, particularly the 5x5 cube.</li><br>
-                         <li>Favorite hobby is coding, started at 13 with Python, inspired by YouTube tutorials</li><br>
-                        </ul>
-                    </p>
-                </div>
-                <div id="sub_text">
-                    <br>
-                    <h3>Programming languages</h3>
-                    <p>
-                        <ul>
-                            <li>Python, Java</li><br>
-                            <li>C++, C</li><br>
-                            <li>HTML, CSS, Java Script, Php, SQL</li><br>
-                        </ul>
-                    </p>
-                </div>
-                <div id="sub_text">
-                    <br>
-                    <h3>Achievements</h3>
-                    
-                    <p>
-                        <ul>
-                            <li>Completed VCE Year 12[2023]</li><br>
-                            <li>Completed Harvard's cs50 Course[2021-2023]</li><br>
-                            <li>Bachelor of Computer Science[2023 - present]</li>
-                        </ul>
-                    </p>
-                </div>
-             </div>
         </div>
-    </div>
-
-    <br><br>
-   <br><br>
-    <br><br>
-    <br><br>
-	<div id="my-code-text" class="fade-section">
-    <h2><u>My Projects</u></h2>
-    <div id="project_list">
-        <!-- Project 1 -->
-        <div class="project-entry" onclick="toggleProject('proj1')">A* Path Finding</div>
-        <div class="project-details" id="proj1">
-            <div class="project-info">
-                <div class="project-text" id="proj1-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo">
-                </div>
+    
+        <div id="name">
+            <h1>Valentino Osorio Schwarz</h1>
+            <div class="socials">
+                <a href="https://github.com/LiveLongFlame" target="_blank">
+                    <img src="Pictures/Github_logo.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/" target="_blank">
+                    <img src="Pictures/Linkedin_logo.png" alt="LinkedIn">
+                </a>
             </div>
-            <button onclick="path_finding_repo()">View on GitHub</button>
         </div>
+    </section>
 
-        <!-- Project 2 -->
-        <div class="project-entry" onclick="toggleProject('proj2')">Personal Website</div>
-        <div class="project-details" id="proj2">
-            <div class="project-info">
-                <div class="project-text" id="proj2-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/personal_website.gif" alt="Personal Website Demo">
-                </div>
+    <!-- About Me Section -->
+    <section id="about_me">
+        <h2>About Me</h2>
+        <p>
+            My name is Valentino Osorio Schwarz, a thrid-year Computer Science student at RMIT who loves to code and create innovative projects. I've been coding for 5 years and use this website to showcase my projects and achievements.
+        </p>
+
+        <div id="sub_info">
+            <div class="sub_text">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Track and field: High Jump, Triple Jump, and sprints (100m, 200m)</li>
+                    <li>Solving Rubik's cubes, especially the 5x5 cube</li>
+                    <li>Coding — started at 13 with Python, inspired by YouTube tutorials</li>
+                </ul>
             </div>
-            <button onclick="personal_website_repo()">View on GitHub</button>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-entry" onclick="toggleProject('proj3')">CS50 Final Project</div>
-        <div class="project-details" id="proj3">
-            <div class="project-info">
-                <div class="project-text" id="proj3-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/cs50_project.gif" alt="CS50 Project Demo">
-                </div>
+            <div class="sub_text">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python, Java</li>
+                    <li>C++, C</li>
+                    <li>HTML, CSS, JavaScript, PHP, SQL</li>
+                </ul>
             </div>
-            <button onclick="cs50_project_repo()">View on GitHub</button>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="project-entry" onclick="toggleProject('proj4')">Budget Tracker</div>
-        <div class="project-details" id="proj4">
-            <div class="project-info">
-                <div class="project-text" id="proj4-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo">
-                </div>
+            <div class="sub_text">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>ANZ eFX intern [2025-2026]</li>
+                    <li>Completed Harvard's CS50 Course [2021–2023]</li>
+                    <li>Bachelor of Computer Science [2023–present]</li>
+                </ul>
             </div>
-            <button onclick="budget_tracker_repo()">View on GitHub</button>
         </div>
+    </section>
 
-		<!-- Project 5 -->
-		<div class="project-entry" onclick="toggleProject('proj5')">CLI Webpage</div>
-		<div class="project-details" id="proj5">
-			<div class="project-info">
-				<div class="project-text" id="proj5-desc">
-					<p>Loading description...</p>
-				</div>
-				<div class="project-image">
-					<!-- need to add image -->
-                    <img src="Pictures/cli_webpage.gif" alt="cli Webpage Demo">
-				</div>
-			</div>
-			<button onclick="cli_webpage()">View on GitHub</button>
-		</div>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2><u>My Projects</u></h2>
+    
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                    <th>Demo</th>
+                    <th>GitHub</th>
+                </tr>
+            </thead>
+            <tbody>
 
-		<!-- Project 6 -->
-		<div class="project-entry" onclick="toggleProject('proj6')">Maze Game</div>
-		<div class="project-details" id="proj6">
-			<div class="project-info">
-				<div class="project-text" id="proj6-desc">
-					<p>Loading description...</p>
-				</div>
-				<div class="project-image">
-					<!-- need to add image -->
-                    <img src="Pictures/maze_game.gif" alt="Maze game demo">
-				</div>
-			</div>
-			<button onclick="maze_game()">View on GitHub</button>
-		</div>
-    </div>
-</div>
-	   </body>
+                <!-- Project in dev -->
+                <tr onclick="toggleProject('proj7')">
+                    <td>SERAX Forex Algo</td>
+                    <td id="proj7-desc">Loading description...</td>
+                    <td>Still Developing</td>
+                    <td><button onclick="event.stopPropagation(); serax_forex_repo()">View</button></td>
+                </tr>
+                <!-- Project 1 -->
+                <tr onclick="toggleProject('proj1')">
+                    <td>A* Path Finding</td>
+                    <td id="proj1-desc">Loading description...</td>
+                    <td><img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo"></td>
+                    <td><button onclick="event.stopPropagation(); path_finding_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 2 -->
+                <tr onclick="toggleProject('proj2')">
+                    <td>Personal Website</td>
+                    <td id="proj2-desc">Loading description...</td>
+                    <td><img src="Pictures/personal_website.gif" alt="Personal Website Demo"></td>
+                    <td><button onclick="event.stopPropagation(); personal_website_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 4 -->
+                <tr onclick="toggleProject('proj4')">
+                    <td>Budget Tracker</td>
+                    <td id="proj4-desc">Loading description...</td>
+                    <td><img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo"></td>
+                    <td><button onclick="event.stopPropagation(); budget_tracker_repo()">View</button></td>
+                </tr>
+    
+                <!-- Project 5 -->
+                <tr onclick="toggleProject('proj5')">
+                    <td>CLI Webpage</td>
+                    <td id="proj5-desc">Loading description...</td>
+                    <td><img src="Pictures/cli_webpage.gif" alt="CLI Webpage Demo"></td>
+                    <td><button onclick="event.stopPropagation(); cli_webpage()">View</button></td>
+                </tr>
+    
+                <!-- Project 6 -->
+                <tr onclick="toggleProject('proj6')">
+                    <td>Maze Game</td>
+                    <td id="proj6-desc">Loading description...</td>
+                    <td><img src="Pictures/maze_game.gif" alt="Maze Game Demo"></td>
+                    <td><button onclick="event.stopPropagation(); maze_game()">View</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+  
+</body>
+<!-- Footer / Photo Credit -->
+<footer id="footer_credit">
+    <p>
+        Photo by 
+        <a href="https://unsplash.com/@ronaldordeoliveira?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">
+            Ronaldo de Oliveira
+        </a> 
+        on 
+        <a href="https://unsplash.com/photos/a-black-and-white-photo-of-a-bird-in-the-dark-qV3-yE6kovQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">
+            Unsplash
+        </a>
+    </p>
+</footer>
 </html>
-
