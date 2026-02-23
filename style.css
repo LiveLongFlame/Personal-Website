@@ -11,7 +11,6 @@ body {
 
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
-    color: #d4af37;
     text-align: center;
     margin-top: 50px;
     text-shadow: 1px 1px 2px #000;
@@ -29,11 +28,11 @@ ul {
 }
 
 section {
-    padding: 60px 20px;
+    padding: 100px 100px;
     background: rgba(20, 20, 20, 0.8);
     margin: 30px auto;
     border-radius: 15px;
-    max-width: 1000px;
+    max-width: 1500px;
 }
 
 #sub_info {
@@ -49,7 +48,6 @@ section {
     min-width: 280px;
     max-width: 30%;
     background-color: rgba(40, 40, 40, 0.9);
-    border: 2px solid #d4af37;
     border-radius: 12px;
     padding: 15px;
 }
@@ -75,6 +73,61 @@ section {
 
     .sub_text {
         max-width: 90%;
+    }
+}
+
+/* Home  */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes items to edges */
+    flex-wrap: wrap; /* keeps it responsive */
+}
+
+#icon img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#name {
+    margin-left: auto; 
+}
+
+#name h1 {
+    text-align: right;
+    margin: 0;
+	font-size: 40px;
+}
+#welcome{
+	font-size: 30px;
+}
+#left {
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome {
+    font-size: 30px;
+}
+
+/* tagline under welcome */
+.tagline {
+    font-size: 20px;
+    max-width: 320px;   /* controls wrapping */
+    margin-top: 5px;
+    line-height: 1.4;
+	font-style: italic;
+}
+/* When screen gets too small */
+@media (max-width: 700px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #name h1 {
+        text-align: center;
     }
 }
 /* Footer Credit */
