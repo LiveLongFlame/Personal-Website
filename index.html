@@ -1,203 +1,124 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="IndexPage_js.js" defer></script>
     <title>Valentino's Website</title>
-	<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
-
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="BackGroundImgae" background="Pictures/dark_background.jpeg">
+<body>
 
-	<!-- Home Info -->
-	<div id="home_info" class="visible">
-		<br><br>
-		<h1><u><center>Valentino Osorio Schwarz</center></u></h1>
-		<center>
-			<p>Self-learning software developer, through research <br> and development.  striving to do my best</p>
-		</center>
+    <!-- Home Section -->
+    <section id="home_info">
+        <h1>Valentino Osorio Schwarz</h1>
+        <p>Self-learning software developer, through research and development, striving to do my best.</p>
+    </section>
 
-	</div>
+    <!-- About Me Section -->
+    <section id="about_me">
+        <h2>About Me</h2>
+        <p>
+            My name is Valentino Osorio Schwarz, a second-year Computer Science student at RMIT who loves to code and create innovative projects. I've been coding for 5 years and use this website to showcase my projects and achievements.
+        </p>
 
-		<br><br>
-		<br><br>
-		<br><br>
-	
-	<h1 id="about_heading" class="fade-section" style="display:none;" ><u><center>About Me</center></u></h1>
-	<h1 id="project_heading"  class="fade-section" style="display:none;"><u><center>My Projects</center></u></h1>
-	<h1 id="contact_heading" class="fade-section" style="display:none;"><u><center>Contact Information</center></u></h1>
-	<!-- Navigation Buttons -->
-	<div id="top_nav" class="visible">
-		<div id="top_nav_buttons" class="visible">
-			<button id="home_info_btn" onclick="scrolltoPoint('home_info')">Home</button>
-			<button id="about_me_btn" onclick="scrolltoPoint('about_me_scroll')">About me</button>
-			<button id="my_code_btn" onclick="scrolltoPoint('my-code-text')">Projects</button>
-
-			<button id="contact_btn">Contact</button>
-
-		</div>
-	</div>
-
-
-    <br><br>
-    <br><br>
-    <br><br> 
-	<!-- Contact Information -->
-	<div id="contact_info" class="fade-section">
-		<h2><u>Contact Information</u></h2>
-		<ul>
-			<li><strong>GitHub:</strong> <a href="https://github.com/LiveLongFlame" target="_blank">github.com/LiveLongFlame</a></li>
-			<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/" target="_blank">linkedin.com/in/valentino-osorio-schwarz-b05842258</a></li>
-			<li><strong>Email:</strong> <a href="mailto:valentinosorioschwarz@gmail.com">valentinosorioschwarz@gmail.com</a></li>
-		</ul>
-	</div>
-	<!-- About Me Text -->
-	<div id="about_me" class="about_me fade-section"> 
-        
-        <div id="about-me-text">
-            <h2><u>About Me</u> </h2>
-            <p>
-                My name is Valentino Osorio Schwarz, I'm currently a second year Computer Science student at the Royal Melbourne University of Technology (RMIT) who loves to code and create new and innovative projects. I've been coding for 5 years now, and want to document all my personal projects and my achievements on this website to show off and demonstrate my skills as a software developer.  
-            </p>
-            <div id="sub_info">
-                <div id="sub_text">
-                    <br>
-                    <h3>Hobbies</h3>
-                    <p>
-                        <ul>
-                         <li>Enjoys track and field, especially High Jump, Triple Jump, and sprints (100m, 200m).</li><br>
-                         <li>Loves solving Rubik's cubes, particularly the 5x5 cube.</li><br>
-                         <li>Favorite hobby is coding, started at 13 with Python, inspired by YouTube tutorials</li><br>
-                        </ul>
-                    </p>
-                </div>
-                <div id="sub_text">
-                    <br>
-                    <h3>Programming languages</h3>
-                    <p>
-                        <ul>
-                            <li>Python, Java</li><br>
-                            <li>C++, C</li><br>
-                            <li>HTML, CSS, Java Script, Php, SQL</li><br>
-                        </ul>
-                    </p>
-                </div>
-                <div id="sub_text">
-                    <br>
-                    <h3>Achievements</h3>
-                    
-                    <p>
-                        <ul>
-                            <li>Completed VCE Year 12[2023]</li><br>
-                            <li>Completed Harvard's cs50 Course[2021-2023]</li><br>
-                            <li>Bachelor of Computer Science[2023 - present]</li>
-                        </ul>
-                    </p>
-                </div>
-             </div>
-        </div>
-    </div>
-
-    <br><br>
-   <br><br>
-    <br><br>
-    <br><br>
-	<div id="my-code-text" class="fade-section">
-    <h2><u>My Projects</u></h2>
-    <div id="project_list">
-        <!-- Project 1 -->
-        <div class="project-entry" onclick="toggleProject('proj1')">A* Path Finding</div>
-        <div class="project-details" id="proj1">
-            <div class="project-info">
-                <div class="project-text" id="proj1-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo">
-                </div>
+        <div id="sub_info">
+            <div class="sub_text">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Track and field: High Jump, Triple Jump, and sprints (100m, 200m)</li>
+                    <li>Solving Rubik's cubes, especially the 5x5 cube</li>
+                    <li>Coding — started at 13 with Python, inspired by YouTube tutorials</li>
+                </ul>
             </div>
-            <button onclick="path_finding_repo()">View on GitHub</button>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="project-entry" onclick="toggleProject('proj2')">Personal Website</div>
-        <div class="project-details" id="proj2">
-            <div class="project-info">
-                <div class="project-text" id="proj2-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/personal_website.gif" alt="Personal Website Demo">
-                </div>
+            <div class="sub_text">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python, Java</li>
+                    <li>C++, C</li>
+                    <li>HTML, CSS, JavaScript, PHP, SQL</li>
+                </ul>
             </div>
-            <button onclick="personal_website_repo()">View on GitHub</button>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-entry" onclick="toggleProject('proj3')">CS50 Final Project</div>
-        <div class="project-details" id="proj3">
-            <div class="project-info">
-                <div class="project-text" id="proj3-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/cs50_project.gif" alt="CS50 Project Demo">
-                </div>
+            <div class="sub_text">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Completed VCE Year 12 [2023]</li>
+                    <li>Completed Harvard's CS50 Course [2021–2023]</li>
+                    <li>Bachelor of Computer Science [2023–present]</li>
+                </ul>
             </div>
-            <button onclick="cs50_project_repo()">View on GitHub</button>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>A* Path Finding</h3>
+            <p>Loading description...</p>
+            <img src="Pictures/PyhtonAI.gif" alt="A* Path Finding Demo">
         </div>
 
-        <!-- Project 4 -->
-        <div class="project-entry" onclick="toggleProject('proj4')">Budget Tracker</div>
-        <div class="project-details" id="proj4">
-            <div class="project-info">
-                <div class="project-text" id="proj4-desc">
-                    <p>Loading description...</p>
-                </div>
-                <div class="project-image">
-                    <img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo">
-                </div>
-            </div>
-            <button onclick="budget_tracker_repo()">View on GitHub</button>
+        <div class="project">
+            <h3>Personal Website</h3>
+            <p>Loading description...</p>
+            <img src="Pictures/personal_website.gif" alt="Personal Website Demo">
         </div>
 
-		<!-- Project 5 -->
-		<div class="project-entry" onclick="toggleProject('proj5')">CLI Webpage</div>
-		<div class="project-details" id="proj5">
-			<div class="project-info">
-				<div class="project-text" id="proj5-desc">
-					<p>Loading description...</p>
-				</div>
-				<div class="project-image">
-					<!-- need to add image -->
-                    <img src="Pictures/cli_webpage.gif" alt="cli Webpage Demo">
-				</div>
-			</div>
-			<button onclick="cli_webpage()">View on GitHub</button>
-		</div>
+        <div class="project">
+            <h3>CS50 Final Project</h3>
+            <p>Loading description...</p>
+            <img src="Pictures/cs50_project.gif" alt="CS50 Project Demo">
+        </div>
 
-		<!-- Project 6 -->
-		<div class="project-entry" onclick="toggleProject('proj6')">Maze Game</div>
-		<div class="project-details" id="proj6">
-			<div class="project-info">
-				<div class="project-text" id="proj6-desc">
-					<p>Loading description...</p>
-				</div>
-				<div class="project-image">
-					<!-- need to add image -->
-                    <img src="Pictures/maze_game.gif" alt="Maze game demo">
-				</div>
-			</div>
-			<button onclick="maze_game()">View on GitHub</button>
-		</div>
-    </div>
-</div>
-	   </body>
+        <div class="project">
+            <h3>Budget Tracker</h3>
+            <p>Loading description...</p>
+            <img src="Pictures/budget_tracker.gif" alt="Budget Tracker Demo">
+        </div>
+
+        <div class="project">
+            <h3>CLI Webpage</h3>
+            <p>Loading description...</p>
+            <img src="Pictures/cli_webpage.gif" alt="CLI Webpage Demo">
+        </div>
+
+        <div class="project">
+            <h3>Maze Game</h3>
+            <p>Loading description...</p>
+            <img src="Pictures/maze_game.gif" alt="Maze Game Demo">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact_info">
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>GitHub:</strong> <a href="https://github.com/LiveLongFlame" target="_blank">github.com/LiveLongFlame</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/valentino-osorio-schwarz-b05842258/" target="_blank">linkedin.com/in/valentino-osorio-schwarz-b05842258</a></li>
+            <li><strong>Email:</strong> <a href="mailto:valentinosorioschwarz@gmail.com">valentinosorioschwarz@gmail.com</a></li>
+        </ul>
+    </section>
+
+</body>
+<!-- Footer / Photo Credit -->
+<footer id="footer_credit">
+    <p>
+        Photo by 
+        <a href="https://unsplash.com/@ronaldordeoliveira?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">
+            Ronaldo de Oliveira
+        </a> 
+        on 
+        <a href="https://unsplash.com/photos/a-black-and-white-photo-of-a-bird-in-the-dark-qV3-yE6kovQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">
+            Unsplash
+        </a>
+    </p>
+</footer>
 </html>
+<!-- todo: neeed to add this at bottom of website to credit him -->
+<!-- Photo by <a href="https://unsplash.com/@ronaldordeoliveira?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ronaldo de Oliveira</a> on <a href="https://unsplash.com/photos/a-black-and-white-photo-of-a-bird-in-the-dark-qV3-yE6kovQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+      
 
