@@ -253,3 +253,20 @@ function maze_game() {
     window.open("https://github.com/LiveLongFlame/Maze_game");
 }
 
+function checkNavPosition() {
+    const nav = document.getElementById('navigation');
+    const homeSection = document.getElementById('home');
+    const rect = nav.getBoundingClientRect();
+    const homeRect = homeSection.getBoundingClientRect();
+
+    // If vertical nav touches the content on the right, switch to top nav
+    if(rect.right + 20 > homeRect.left) {
+        nav.classList.add('top-nav');
+    } else {
+        nav.classList.remove('top-nav');
+    }
+}
+
+// Run on load and on resize
+window.addEventListener('load', checkNavPosition);
+window.addEventListener('resize', checkNavPosition);
