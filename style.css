@@ -148,6 +148,38 @@ section {
         text-align: center;
     }
 }
+/* Navigation Section */
+#navigation {
+    display: flex;
+    justify-content: center;       /* center the buttons */
+    align-items: center;
+    background: rgba(20,20,20,0.8); /* optional: same style as sections */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;                /* allows buttons to wrap on smaller screens */
+}
+
+.nav-btn {
+    padding: 10px 25px;
+    background-color: white;   /* default boring white */
+    color: #111;               /* text color */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-btn:hover {
+    /* colorful hover effect */
+    background: linear-gradient(45deg, #d4af37, #ff6b6b, #6a5acd);
+    color: #fff;
+    transform: scale(1.05); /* subtle zoom */
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+}
 /* Footer Credit */
 #footer_credit {
     text-align: center;
