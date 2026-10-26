@@ -92,11 +92,19 @@
             </thead>
             <tbody>
 
+                <!-- ChainGuard -->
+                <tr onclick="toggleProject('proj8')">
+                    <td>ChainGuard</td>
+                    <td id="proj8-desc">Loading description...</td>
+                    <td>Local app</td>
+                    <td><button onclick="event.stopPropagation(); chain_guard_repo()">View</button></td>
+                </tr>
+
                 <!-- Project in dev -->
-                <tr onclick="toggleProject('proj7')">
+                <tr class="developing-project" onclick="toggleProject('proj7')">
                     <td>SERAX Forex Algo</td>
                     <td id="proj7-desc">Loading description...</td>
-                    <td>Still Developing</td>
+                    <td><span class="project-status developing">In Development</span></td>
                     <td><button onclick="event.stopPropagation(); serax_forex_repo()">View</button></td>
                 </tr>
                 <!-- Project 1 -->

@@ -20,7 +20,8 @@ const projectReadmes = {
     proj4: "Budget Tracker: Tracks income and expenses with charts and summaries using JS and PHP backend.",
     proj5: "Terminal-based interactive CLI webpage using ncurses for project showcase.",
     proj6: "Maze Game: Procedural maze generator and solver implemented in C++ with interactive gameplay.",
-    proj7: "SERAX Forex Algo: A machine learning algorithm for EFX currency prediction. Currently under development, implementing multi-feature classification and trading strategies."
+    proj7: "SERAX Forex Algo: A machine learning algorithm for EFX currency prediction. Currently under development, implementing multi-feature classification and trading strategies.",
+    proj8: "ChainGuard: A local web app for blockchain questions, Ethereum address lookups, and scam investigations, combining blockchain data with AI explanations."
 };
 
 window.onload = () => {
@@ -38,4 +39,7 @@ function cli_webpage() { window.open("https://github.com/LiveLongFlame/Terminal_
 function maze_game() { window.open("https://github.com/LiveLongFlame/Maze_game", "_blank"); }
 function serax_forex_repo() { 
     window.open("https://github.com/LiveLongFlame/SERAX_Forex_algo", "_blank"); 
+}
+function chain_guard_repo() {
+    window.open("https://github.com/print-livelongflame/ChainGuard", "_blank");
 }
